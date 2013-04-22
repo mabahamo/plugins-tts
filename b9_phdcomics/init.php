@@ -12,7 +12,7 @@ class B9_PhdComics extends Plugin {
         }
 
         function init($host) {
-                $this->link = $host->get_link();
+                $this->link = $host->get_dbh();
                 $this->host = $host;
 
                 $host->add_hook($host::HOOK_ARTICLE_FILTER, $this);
