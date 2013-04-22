@@ -6,10 +6,14 @@ class B9_PhdComics extends Plugin {
         private $host;
 
         function about() {
-                return array(1.0,
+                return array(1.1,
                         "Strip unnecessary stuff from phdcomics feeds",
                         "b9.cl");
         }
+
+		function api_version() {
+	      return 2;
+	    }
 
         function init($host) {
                 $this->link = $host->get_dbh();
